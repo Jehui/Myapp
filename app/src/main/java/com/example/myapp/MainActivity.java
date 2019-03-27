@@ -314,6 +314,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
                     .show();
         else
 //            showCustomToast("This is latest version.");
+        Log.d(MainActivity.class.getSimpleName(),curVersionCode+"   github版本："+entity.getApkInfo().getVersionCode());
             Toast.makeText(getBaseContext(), "当前是最新版本！", Toast.LENGTH_SHORT).show();
     }
 
