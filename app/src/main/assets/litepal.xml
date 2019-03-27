@@ -5,6 +5,6 @@
     <version value="2"></version><!--dbname用于指定数据库版本-->
 <!--数据库版本，如果修改了数据库中的列，例如加了一列，需要给value加1，这样才能更新数据库-->
     <list>
-        <mapping class="com.example.myapp.PictuerInfor" />
+        <mapping class="com.example.myapp.entity.PictuerInfor" />
     </list>
 </litepal>

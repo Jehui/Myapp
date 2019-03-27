@@ -1,4 +1,4 @@
-package com.example.myapp.ui;
+package com.example.myapp;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,9 +19,9 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myapp.HistoryToPictuerinformation;
-import com.example.myapp.MainActivity;
-import com.example.myapp.PictuerInfor;
+import com.example.myapp.entity.PictuerInfor;
+import com.example.myapp.ui.BaseActivity;
+
 import org.litepal.crud.DataSupport;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -46,7 +46,7 @@ public class History extends BaseActivity {
         stepLinearLayout.setPadding(space * 2, 0, space * 2, 0);
         stepLinearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);//分割线
         GradientDrawable lineSpaceDrawable = DynamicDrawableFactory.cornerRectangleDrawable(Color.TRANSPARENT, 0);//Color.TRANSPARENT背景色设置为透明,这是分割线
-        lineSpaceDrawable.setSize(-1, CompatResourceUtils.getDimensionPixelSize(this, dimen.space_8));
+        lineSpaceDrawable.setSize(-1, CompatResourceUtils.getDimensionPixelSize(this, dimen.space_1));
         stepLinearLayout.setDividerDrawable(lineSpaceDrawable);
         lScrollView.addView(stepLinearLayout, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         lScrollView.setBackgroundColor(Color.WHITE);

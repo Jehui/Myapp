@@ -39,7 +39,7 @@ public class VerticalStepLinearLayout extends LinearLayout implements IViewAttrD
     public final static int RIGHT = 1;
     public final static int SORT_BASE_TOP = 0;
     public final static int SORT_BASE_FIRST = 1;
-
+    int number=0;
     @IntDef({LEFT, RIGHT})
     @Retention(RetentionPolicy.SOURCE)
     public @interface Location {
@@ -282,8 +282,7 @@ public class VerticalStepLinearLayout extends LinearLayout implements IViewAttrD
         Paint.FontMetrics fontMetrics = textPaint.getFontMetrics();
 
         for (int i = 0; i < yShowAxis.size(); i++) {
-//           Log.d(String.valueOf(this),yShowAxis.size()+" 我 ");
-           if(i%2==0) drawIndex(canvas, i, centerX, fontMetrics);//画布
+           if(i%2==0) drawIndex(canvas, i, centerX, fontMetrics);//画布,两个画一次
         }
 
     }
@@ -303,7 +302,7 @@ public class VerticalStepLinearLayout extends LinearLayout implements IViewAttrD
         textPaint.getTextBounds(s, 0, s.length(), rect);
         float start = centerX - rect.width() / 2.0f;
         float baseLine = yShowAxis.get(index) - rect.height() / 2.0f + (rect.height() - fontMetrics.bottom + fontMetrics.top) / 2 - fontMetrics.top;
-       //下面四行是自己修改的，
+       //下面四行是自己修改的，左侧的数字序号
         int x,y;
         x= Integer.valueOf(s);
         y=x/2+1;

@@ -1,0 +1,24 @@
+1、更新功能注意：app/bulid/的json文件的版本也需要修改，因为APP是通过比对json文件中的信息来决定给是否下载
+
+2、git命令上传项目，注意不要在github新建项目时候穿件readme.md和其他文件，否则上传不上去
+
+3、git更换上传项目至gitee码云，则要更换远程仓库的！！！：
+	1、先输入$ git remote rm origin
+	2、再输入$ git remote add origin [码云项目地址]
+
+
+4、Ctrl+C 终端运行停止
+5、AS中可以开启自动导入所有包
+
+6、AS中创建类的getting和setting方法快捷键：Alt+insert
+7、AS中错误：Alt+Enter
+
+8、更换下载链接，发现由于链接名字太长，导致问题出现，所以仍旧用github下载，如果使用蒲公英下载的话，则不需要注册下载完成监听之后的内容，而是直接调用下载功能。
+
+9、litepal数据利用  Connector.getDatabase();//创建数据库，如果修改数据库的结构，则需要在litepal.xml文件中修改version版本号在，这样子才能更新数据库结构，
+10、litapal删除数据，ID号并没有被删除！
+11、
+
+
+
+

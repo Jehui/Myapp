@@ -15,7 +15,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.myapp.R;
@@ -25,9 +24,7 @@ import jsc.kit.component.utils.CompatResourceUtils;
 import jsc.kit.component.utils.WindowUtils;
 
 public abstract class BaseActivity extends BaseAppCompatActivity {
-    private ImageView ivBack;
     private TextView tvTitle;
-    private ActionMenuView actionMenuView;
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
@@ -67,14 +64,14 @@ public abstract class BaseActivity extends BaseAppCompatActivity {
 //        customView.addView(actionMenuView, menuParams);
     }
 
-    public ActionMenuView getActionMenuView() {
-        return actionMenuView;
-    }
-
-    public final void showTitleBarBackView(boolean show) {
-        if (ivBack != null)
-            ivBack.setVisibility(show ? View.VISIBLE : View.GONE);
-    }
+//    public ActionMenuView getActionMenuView() {
+//        return actionMenuView;
+//    }
+//
+//    public final void showTitleBarBackView(boolean show) {
+//        if (ivBack != null)
+//            ivBack.setVisibility(show ? View.VISIBLE : View.GONE);
+//    }
 
     public final void setTitleBarTitle(CharSequence title) {
         if (tvTitle != null)

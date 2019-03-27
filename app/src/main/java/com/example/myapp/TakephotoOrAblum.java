@@ -282,7 +282,6 @@ public class TakephotoOrAblum extends AppCompatActivity {
         return path;
     }
 
-
     /*
      * 判断sdcard是否被挂载
      */

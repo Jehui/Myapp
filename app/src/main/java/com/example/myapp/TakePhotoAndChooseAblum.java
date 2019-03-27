@@ -24,6 +24,8 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;
 import jsc.kit.component.archeaderview.PictureArcHeaderView;
+
+import com.example.myapp.entity.PictuerInfor;
 import com.example.myapp.ui.BaseActivity;
 import com.example.myapp.ternsorflow.Classifier;
 import com.example.myapp.ternsorflow.TensorFlowImageClassifier;
@@ -44,7 +46,6 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
 
     private static final String INPUT_NAME = "x";
     private static final String OUTPUT_NAME = "logits_eval";
-    //    private static final String MODEL_FILE = "file:///android_asset/model/tensorflow_inception_graph.pb";
     private static final String MODEL_FILE = "file:///android_asset/model/wx.pb";
     private static final String LABEL_FILE = "file:///android_asset/model/imagenet_comp_graph_label_strings.txt";
 
@@ -61,9 +62,9 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_v_scroll_screen_layout);
+        setContentView(R.layout.takephotoandchooseablum);
         //下面的方法是是给页面设置标题，是baseActivity中的一个方法
-        setTitleBarTitle(getClass().getSimpleName().replace("TakePhotoAndChooseAblum", "详情"));
+        setTitleBarTitle(getClass().getSimpleName().replace("TakePhotoAndChooseAblum", "识别结果"));
 
         /*
          * 7.0之后你的app就算有权限，给出一个URI之后手机也认为你没有权限，调用摄像头后，直接崩溃。

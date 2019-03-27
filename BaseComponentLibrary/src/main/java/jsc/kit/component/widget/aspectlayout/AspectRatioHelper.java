@@ -43,7 +43,7 @@ public class AspectRatioHelper {
         return baseWhat;
     }
 
-    public void setBaseWhat(@AspectRatioHelper.BaseWhat int baseWhat) {
+    public void setBaseWhat(@BaseWhat int baseWhat) {
         this.baseWhat = baseWhat;
     }
 

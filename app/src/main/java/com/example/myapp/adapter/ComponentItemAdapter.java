@@ -33,13 +33,6 @@ public class ComponentItemAdapter extends BaseRecyclerViewAdapter<ComponentItem,
     public ComponentItemAdapter() {
     }
 
-    public ComponentItemAdapter(int layoutId) {
-        super(layoutId);
-    }
-
-    public ComponentItemAdapter(int layoutId, boolean itemClickEnable, boolean itemLongClickEnable) {
-        super(layoutId, itemClickEnable, itemLongClickEnable);
-    }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override

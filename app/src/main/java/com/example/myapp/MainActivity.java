@@ -30,11 +30,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import com.example.myapp.entity.Banner;
+import com.example.myapp.entity.PictuerInfor;
 import com.example.myapp.entity.VersionEntity;
 import com.example.myapp.service.ApiService;
 import com.example.myapp.ui.BaseActivity;
 import com.example.myapp.ui.ComponentsActivity;
-import com.example.myapp.ui.History;
 
 import org.litepal.crud.DataSupport;
 import org.litepal.tablemanager.Connector;
@@ -71,14 +71,15 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jsc_banner_view);
-
+        setContentView(R.layout.activity_main);
+//Android7以后，读取文件的路径的权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
             StrictMode.setVmPolicy(builder.build());
         }
 
         setTitleBarTitle(getClass().getSimpleName().replace("MainActivity", "作物缺素检测系统"));
+
         jscBannerView = findViewById(R.id.banner_view);
         display=findViewById(R.id.takephoto);
         histories=findViewById(R.id.histories);
@@ -96,7 +97,6 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 loadVersionInfo();
-//                downloadApk("ds");
             }
         });
 
@@ -106,9 +106,9 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
        jscBannerView.setBackgroundView(backgroundView,
                 new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,
                         FrameLayout.LayoutParams.MATCH_PARENT));
-        Connector.getDatabase();//创建数据库
 
-        example2();
+        Connector.getDatabase();//创建数据库
+        wangxiong();
     }
 
     //点击拍照按钮，使用ShowDialog中的私有方法展示底下弹出菜单的功能
@@ -162,7 +162,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
         }
     }
 
-    private void example2() {
+    private void wangxiong() {
         jscBannerView.getChildAt(0).setVisibility(View.INVISIBLE);
         jscBannerView.setClipChildren(false);
         /*
@@ -384,8 +384,6 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
             }
         }, Manifest.permission.REQUEST_INSTALL_PACKAGES);
     }
-
-
 
     private final void showCustomToast(CharSequence txt) {
         new CustomToast.Builder(this)
