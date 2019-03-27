@@ -43,14 +43,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- 多个界面需要注册Activity -->
-        <activity
-            android:name=".ui.ComponentsActivity"
-            android:label="你猜" />
-        <activity
-            android:name=".TakePhotoAndChooseAblum"
-            android:label="你猜" />
+        <activity android:name=".ui.ComponentsActivity" />
+        <activity android:name=".TakePhotoAndChooseAblum" />
         <activity android:name=".TakephotoOrAblum" />
         <activity android:name=".ui.History" />
+        <activity android:name=".AboutActivity" />
     </application>
 
 </manifest>

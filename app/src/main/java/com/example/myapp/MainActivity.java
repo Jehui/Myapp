@@ -162,7 +162,8 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
 
                 break;
             case R.id.information:
-
+                Intent intent2=new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent2);
                 break;
         }
     }
@@ -314,7 +315,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
                     .show();
         else
 //            showCustomToast("This is latest version.");
-        Log.d(MainActivity.class.getSimpleName(),curVersionCode+"   github版本："+entity.getApkInfo().getVersionCode());
+//        Log.d(MainActivity.class.getSimpleName(),curVersionCode+"   github版本："+entity.getApkInfo().getVersionCode());
             Toast.makeText(getBaseContext(), "当前是最新版本！", Toast.LENGTH_SHORT).show();
     }
 
