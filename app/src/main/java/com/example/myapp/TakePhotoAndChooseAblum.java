@@ -1,12 +1,5 @@
 package com.example.myapp;
-import android.Manifest;
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.content.ContentUris;
-import android.content.ContentValues;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -21,15 +14,9 @@ import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
@@ -40,8 +27,6 @@ import jsc.kit.component.archeaderview.PictureArcHeaderView;
 import com.example.myapp.ui.BaseActivity;
 import com.example.myapp.ternsorflow.Classifier;
 import com.example.myapp.ternsorflow.TensorFlowImageClassifier;
-
-import org.litepal.crud.DataSupport;
 
 public class TakePhotoAndChooseAblum  extends BaseActivity {
 

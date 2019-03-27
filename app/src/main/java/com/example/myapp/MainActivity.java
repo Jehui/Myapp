@@ -3,14 +3,10 @@ package com.example.myapp;
 import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
-import android.app.DownloadManager;
-import android.content.BroadcastReceiver;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -22,8 +18,6 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -59,7 +53,6 @@ import jsc.kit.component.baseui.download.DownloadEntity;
 import jsc.kit.component.baseui.permission.PermissionChecker;
 import jsc.kit.component.utils.CompatResourceUtils;
 import jsc.kit.component.utils.CustomToast;
-import jsc.kit.component.utils.FileProviderCompat;
 import jsc.kit.retrofit2.LoadingDialogObserver;
 import jsc.kit.retrofit2.retrofit.CustomHttpClient;
 import jsc.kit.retrofit2.retrofit.CustomRetrofit;
@@ -103,6 +96,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
             @Override
             public void onClick(View v) {
                 loadVersionInfo();
+//                downloadApk("ds");
             }
         });
 
@@ -340,8 +334,8 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
 
     private void downloadApk(String versionName) {
         DownloadEntity entity = new DownloadEntity();
-//        entity.setUrl("https://raw.githubusercontent.com/JustinRoom/JSCKit/master/capture/JSCKitDemo.apk");
-        entity.setUrl("https://raw.githubusercontent.com/wangbuer1/Myapp/master/app/release/app-release.apk");
+//        entity.setUrl("https://raw.githubusercontent.com/wangbuer1/Myapp/master/app/release/app-release.apk");
+        entity.setUrl("https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe");
         entity.setDestinationDirectory(new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS));
         entity.setSubPath("王雄/植物缺素检测系统" + versionName + ".apk");
         entity.setTitle("植物缺素检测系统" + versionName + ".apk");

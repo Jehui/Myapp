@@ -4,16 +4,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.TypedValue;
 import android.widget.TextView;
 
 import com.example.myapp.ui.BaseActivity;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 import jsc.kit.component.archeaderview.PictureArcHeaderView;
 

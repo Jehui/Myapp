@@ -33,9 +33,9 @@
         </provider>
 
 
-        <activity android:name=".HistoryToPictuerinformation"></activity>
+        <activity android:name="com.example.myapp.HistoryToPictuerinformation"></activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.myapp.MainActivity"
             android:label="@string/title_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,11 +43,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- 多个界面需要注册Activity -->
-        <activity android:name=".ui.ComponentsActivity" />
-        <activity android:name=".TakePhotoAndChooseAblum" />
-        <activity android:name=".TakephotoOrAblum" />
-        <activity android:name=".ui.History" />
-        <activity android:name=".AboutActivity" />
+        <activity android:name="com.example.myapp.ui.ComponentsActivity" />
+        <activity android:name="com.example.myapp.TakePhotoAndChooseAblum" />
+        <activity android:name="com.example.myapp.TakephotoOrAblum" />
+        <activity android:name="com.example.myapp.ui.History" />
+        <activity android:name="com.example.myapp.AboutActivity" />
     </application>
 
 </manifest>

@@ -45,7 +45,6 @@ public final class FileDownloader {
      * 注册下载完成监听
      */
     public void registerDownloadCompleteReceiver() {
-        Log.d(FileDownloader.class.getSimpleName(),"定位4");
         if (isRegisterDownloadReceiver)
             return;
 
@@ -56,6 +55,7 @@ public final class FileDownloader {
                     if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(intent.getAction())) {
                         long downloadId = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1);
                         findDownloadFileUri(downloadId);
+
                     } else if (DownloadManager.ACTION_NOTIFICATION_CLICKED.equals(intent.getAction())) {
                         context.startActivity(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS));
                     }
@@ -146,7 +146,6 @@ public final class FileDownloader {
      * @param completeDownLoadId download id
      */
     public void findDownloadFileUri(long completeDownLoadId) {
-        Log.d(FileDownloader.class.getSimpleName(),"定位7");
         Uri uri;
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             // 6.0以下
@@ -154,8 +153,11 @@ public final class FileDownloader {
             assert downloadManager != null;
             uri = downloadManager.getUriForDownloadedFile(completeDownLoadId);
         } else {
+
             File file = queryDownloadedFile(completeDownLoadId);
             //android7以上获取路径的方法
+            Log.d(FileDownloader.class.getSimpleName(), "我是大人"+String.valueOf(file));
+
             uri = FileProvider.getUriForFile(context, "com.example.myapp.fileProvider", file);
 //            uri = FileProviderCompat.getUriForFile(context, file);
             Log.d(FileDownloader.class.getSimpleName(),"定位x");
@@ -177,8 +179,11 @@ public final class FileDownloader {
             assert downloadManager != null;
             Cursor cur = downloadManager.query(query);
             if (cur != null) {
+                Log.d(FileDownloader.class.getSimpleName(), "我是大人9");
                 if (cur.moveToFirst()) {
+                    Log.d(FileDownloader.class.getSimpleName(), "我是大人2");
                     String uriString = cur.getString(cur.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI));
+                    Log.d(FileDownloader.class.getSimpleName(), "我是大人1"+uriString);
                     if (!TextUtils.isEmpty(uriString)) {
                         targetFile = new File(Uri.parse(uriString).getPath());
                     }

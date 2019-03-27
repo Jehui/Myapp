@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Message;
-import android.provider.Settings;
 import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v7.app.ActionBar;
@@ -23,7 +22,6 @@ import com.example.myapp.R;
 import jsc.kit.component.baseui.BaseAppCompatActivity;
 import jsc.kit.component.baseui.transition.TransitionProvider;
 import jsc.kit.component.utils.CompatResourceUtils;
-import jsc.kit.component.utils.CustomToast;
 import jsc.kit.component.utils.WindowUtils;
 
 public abstract class BaseActivity extends BaseAppCompatActivity {

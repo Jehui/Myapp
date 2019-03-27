@@ -35,8 +35,6 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Vector;
 
-import com.example.myapp.ternsorflow.TensorFlowImageClassifier;
-
 /** A classifier specialized to label images using TensorFlow. */
 public class TensorFlowImageClassifier implements Classifier {
     private static final String TAG = "TensorFlowImageClassifier";

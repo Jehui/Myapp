@@ -18,7 +18,7 @@ import android.widget.TextView;
 import com.example.myapp.entity.ComponentItem;
 
 import com.example.myapp.R;
-import com.example.myapp.entity.ComponentItem;
+
 import jsc.kit.component.swiperecyclerview.BaseRecyclerViewAdapter;
 import jsc.kit.component.swiperecyclerview.BaseViewHolder;
 import jsc.kit.component.utils.CompatResourceUtils;
