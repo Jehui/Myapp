@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">作物缺素检测系统</string>
+    <string name="menu_home">Home</string>
+    <string name="title_activity">作物缺素检测系统</string>
+    <string name="menu_circumference">Circumference</string>
+    <string name="menu_navigation">Navigation</string>
+    <string name="menu_me">Me</string>
+    <string name="article">
+        \u3000\u3000Most parents genuinely do their best to provide their children with a happy and healthy upbringing,
+        but even these individuals can accidentally make mistakes that may result in future therapy appointments.
+        \n\u3000\u3000Unfortunately, some parents go beyond the occasional mistake and veer into the toxic category.
+        Regardless of whether or not a parent is purposefully being toxic, there are several behaviors that can cause so
+        much emotional and mental damage to a child that it ends up greatly affecting them even after they have grown
+        up.
+        \n\u3000\u3000If you experienced any of the following situations as a child, the odds are high that one or both
+        of your parents were at least slightly toxic.
+        \n1. They Fail To Provide You With Affirmation And Security
+        \n\u3000\u3000Some people believe that showing tough love is an important way to ensure that their children are
+        able to take care of themselves in the future. If you were the recipient of this approach on a regular basis,
+        you might even believe that this has had a positive impact on your life. However, if you practically fall apart
+        now because of any perceived failure or rejection, then this most likely stems from a parent\'s toxic refusal to
+        provide you with the right amount of security and affirmation while you were young. Tough love might work
+        sometimes, but it cannot be the only approach a parent takes if they want their child to become a well-rounded
+        adult.
+        \n2. They Are Overly Critical
+        \n\u3000\u3000Everyone\'s parents criticize from time to time. Without this component, we might never learn how
+        to do numerous things properly, such as everyday chores like washing laundry. A toxic parent takes this to
+        extremes by being overly critical about everything their child does. Parents can make the mistake of believing
+        that they do this to make sure their children avoid making costly mistakes. Unfortunately, what this behavior
+        really does is causing the child to develop a harsh inner critic that can be borderline crippling during
+        adulthood.
+        \n3. They Demand Your Attention
+        \n\u3000\u3000Toxic parents often turn their children into their own parental substitutes by demanding their
+        attention at all times. This can be seen as bonding between the parent and child, but it is really a parasitic
+        relationship that requires too much of the child\'s time and energy when they should be focused on learning
+        other skills. Although it may be difficult at times, a well-rounded parent will allow their children enough
+        space to grow and be kids without demanding constant interaction to suit their own needs.
+        \n4. They Make Toxic "Jokes" About You
+        \n\u3000\u3000All parents occasionally pick on their children, but when the so-called jokes become commonplace,
+        this can be a huge problem. You do not need to accept this type of behavior just because your parent has always
+        joked about something such as your height or weight. Ultimately, this is an undermining tactic that can make you
+        feel very badly about yourself. If a parent has a legitimate concern to address with their child, they should be
+        honest and non-critical, as opposed to making mean jokes.
+        \n5. They Cause You To Justify Terrible Behavior
+        \n\u3000\u3000Did you grow up believing that your parent was physically or emotionally abusive to you because
+        you deserved it? If so, you may still be justifying the terrible behavior of others at your own expense. Toxic
+        parents can twist any situation to suit their needs, and this leaves children with two choices: accept that
+        their parent is wrong or internalize all of the blame. In most cases, children, even those who are adults now,
+        choose the latter option.
+        \n6. They Do Not Allow You To Express Negative Emotions
+        \n\u3000\u3000Parents who refuse to nurture their child\'s emotional needs and make light of their negative
+        emotions are setting up a future where the child will feel unable to express what they need. There is nothing
+        wrong with helping children see the positive side of any situation. However, being completely dismissive of a
+        child\'s negative feelings and emotional needs can lead to depression and make it more difficult for them to
+        appropriately handle negativity as adults.
+    </string>
+    <string name="cucumer">
+        <b>\u3000\u3000\u3000\u3000\u3000黄瓜（学名：Cucumis sativus L.）</b>
+        \n\u3000\u3000葫芦科一年生蔓生或攀援草本植物。茎、枝伸长，有棱沟，被白色的糙硬毛。卷须细。叶柄稍粗糙，有糙硬毛；叶片宽卵状心形，
+        膜质，裂片三角形，有齿。雌雄同株。雄花：常数朵在叶腋簇生；花梗纤细，被微柔毛；花冠黄白色，
+        花冠裂片长圆状披针形。雌花：单生或稀簇生；花梗粗壮，被柔毛；子房粗糙。果实长圆形或圆柱形，熟时黄绿色，
+        表面粗糙。种子小，狭卵形，白色，无边缘，两端近急尖。花果期夏季。。
+        \n\u3000\u3000中国各地普遍栽培，且许多地区均有温室或塑料大棚栽培；现广泛种植于温带和热带地区。
+        黄瓜为中国各地夏季主要菜蔬之一。茎藤药用，能消炎、祛痰、镇痉。
+        \n\u3000\u3000<b>形态特性：</b>一年生蔓生或攀援草本；茎、枝伸长，有棱沟，被白色的糙硬毛。卷须细，不分歧，具白色柔毛。
+        \n\u3000\u3000<b>分布范围：</b>中国各地普遍栽培；现广泛种植于温带和热带地区。
+        <b>\n\u3000\u3000植物文化：传说</b>
+        \n\u3000\u3000黄瓜原名叫胡瓜，是汉朝张骞出使西域时带回来的。胡瓜更名为黄瓜，始于后赵。后赵王朝的建立者石勒，
+        本是入塞的羯族人。他在襄国（今河北邢台）登基做皇帝后，对自己国家的人称呼羯族人为胡人大为恼火。石勒制定了一条法令：
+        无论说话写文章，一律严禁出现“胡”字，违者问斩个赦。
+        \n\u3000\u3000有一天，石勒在单于庭召见地方官员，当他看到襄国郡守樊坦穿着打了补丁的破衣服来见他时，很不满意。
+        他劈头就问：“樊坦，你为何衣冠不整就来朝见？”樊坦慌乱之中不知如何回答是好，随口答道：“这都怪胡人没道义，把衣物
+        都抢掠去了，害得我只好褴褛来朝。”他刚说完，就意识到自己犯了禁，急忙叩头请罪；石勒见他知罪，也就不再指责。等到
+        召见后例行“御赐午膳”时，石勒又指着一盘胡瓜问樊坦：“卿知此物何名？”樊坦看出这是石勒故意在考问他，便恭恭敬敬地
+        回答道：“紫案佳肴，银杯绿茶，金樽甘露，玉盘黄瓜。”石勒听后，满意地笑了。
+        <b> \u3000\u3000植物文化：诗词</b>
+        <b>\n\u3000\u3000作者：乾隆年代：清</b>
+        \n\u3000\u3000菜盘佳品最燕京，二月尝新岂定评。压架缀篱偏有致，田家风景绘真情。
+    </string>
+    <string name="K">
+        \n\u3000\u3000<b>(一) [症状]:</b>
+        ①在黄瓜生长早期，叶缘出现轻微的黄化，在次序上先是叶缘，然后是叶脉间黄化，顺序很明显；②在生育的中、后期，中位叶附近出现和上述相同的症状；③叶缘枯死，随着叶片不断生长，叶向外侧卷曲；④叶片稍有硬化；⑤瓜条稍短，膨大不良。
+        \n\u3000\u3000<b>(二) [对策]: </b>
+        1)施用足够的钾肥，特别是在生育的中、后期，注意不可缺钾。（2）植株对钾的吸收量是吸收氮量的50％，确定施肥量要考虑这一点。(3)施用充足的堆肥等有机质肥料。(4)如果钾不足，可用硫酸钾平均每亩3～4.5公斤，一次追施。
+        \n\u3000\u3000<b>(三) [易发生的条件]:</b>
+        ①在砂土等含钾量低的土壤中易缺钾；②施用堆肥等有机质肥料和钾肥少，供应量满足不了吸收量时易出现缺钾症；③地温低，日照不足，过湿等条件阻碍了对钾的吸收；④施氮肥过多，产生对钾吸收的拮抗作用。
+        \n\u3000\u3000<b>(四) 诊断要点:</b>
+        ①注意叶片发生症状的位置，如果是下位叶和中位叶出现症状可能缺钾；②生育初期，当温度低，覆盖栽培(双层覆盖)时，气体障害有类似的症状，；③同样的症状，如出现在上位叶，则可能是缺钙；④是否畸形果多(如小头果、弯曲果、蜂腰果等)；⑤收获量大，生育后期发生此类症状时，要调查是否施肥量不足；⑥老叶枯死部分与健全部分的分界线是否有水浸状。如果界线明显为缺钾；⑦正常叶钾含量在2％～2.5％，低于1.5％为缺钾。
+        <font color="#FF0000" size="20">\n\n\u3000\u3000<b>向上滑动查看黄瓜详细信息</b></font>
+        \n\n\n\n
+    </string>
+    <string name="N">
+        \n\u3000\u3000<b>(一) [症状]:</b>
+        ①叶片小，上位叶更小；②从下位叶到上位叶逐渐变黄；③开始叶脉间黄化，叶脉凸出可见。最后全叶变黄；④上位叶变小，不黄化；⑥座果数少，瓜果生长发育不良。(一) [症状] ①叶片小，上位叶更小；②从下位叶到上位叶逐渐变黄；③开始叶脉间黄化，叶脉凸出可见。最后全叶变黄；④上位叶变小，不黄化；⑥座果数少，瓜果生长发育不良。
+        \n\u3000\u3000<b>(二) [对策]: </b>
+         ①最重要的是施用新鲜的有机物时要防止氮不足。用稻草作基肥要增施氮素；②低温时施用硝态氮效果好；③施用完全腐熟的堆肥，可以提高地力；④叶面喷施0.2%～0.5%尿素。
+        \n\u3000\u3000<b>(三) [易发生的条件]:</b>
+        ①前作施有机肥少，土壤含氮量低②种植前施大量没有腐熟的稻草，碳素多，其分解时夺取土壤中氮；③露地栽培，由于降雨多氮被淋失；④砂土、砂壤土，阴离子交换少的土壤缺氮；⑤收获量大，从土壤中吸收氮多而追肥不及时。
+        \n\u3000\u3000<b>(四) 诊断要点:</b>
+        ①仔细观察，从上位叶，还是从下位叶开始黄化，从下位叶开始黄化刚是缺氮；②注意茎的粗细，一般缺氮茎细；②定植前的苗床是否施用大量稻草(600～1200公斤／亩)，大量施用稻草会引起缺氮；④下位叶叶缘急剧黄化(缺钾)，叶缘部分残留有绿色(缺镁)，上两种情况不是缺氮。叶螨为害呈斑点状失绿；⑤测定土壤电导率(EC)，如果EC值高则不缺氮；⑥叶片外侧黄化向外卷曲,是缺乏其它的营养元素；⑦叶黄白天萎蔫，可以考虑其它的原因；⑧叶片含氮在3.0～3.5%为正常，低于2.5%则缺氮。
+        <font color="#FF0000" size="18">\n\n\u3000\u3000<b>向上滑动查看黄瓜详细信息</b></font>
+        \n\n\n\n
+    </string>
+    <string name="P">
+        \n\u3000\u3000<b>(一) [症状]:</b>
+        ①苗期，叶色浓绿、发硬、矮化；②叶片小，稍微向上挺；③定植到露地后，就停止 生长，叶色浓绿；④果实成熟晚。
+        \n\u3000\u3000<b>(二) [对策]: </b>
+        ①黄瓜是对磷不足敏感的作物。土壤中全磷含量在30毫克/100克土以下时，除了施用磷肥外，预先要改良土壤，施熔磷肥或烧成磷肥(热制)等。土壤含磷量在150毫克／100克土以下时，施用磷肥的效果是显著的；②黄瓜苗期特别需要磷，所以培养土平均每升要施用P2O51000～1500毫克；③施用足够的堆肥等有机质肥料。
+        \n\u3000\u3000<b>(三) [易发生的条件]:</b>
+        ①在磷吸收系数高的土壤，如火山灰土，种植蔬菜不久就会出现缺磷；②堆肥施量小，磷肥用量少易发生缺磷症；③地温常常影响对磷的吸收。温度低，对磷的吸收就少；④利用山土育苗，没有施用足够的磷肥，出现缺磷症。
+        \n\u3000\u3000<b>(四) 诊断要点:</b>
+        ①注意症状出现的时期，由于温度低，既使土壤中磷素充足，也难以吸收磷素，易出现缺磷症。在生育初期，叶色为浓绿色，后期出现褐斑。②叶片正常含磷量在0.2%～0.4%，低于0.2%则缺磷。
+        \n\n\u3000\u3000<b>向上滑动查看黄瓜详细信息</b>
+    <font color="#FF0000" size="18">\n\n\u3000\u3000<b>向上滑动查看黄瓜详细信息</b></font>
+        \n\n\n\n
+    </string>
+
+</resources>

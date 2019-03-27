@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <jsc.kit.component.bannerview.JSCBannerView
+        android:id="@+id/banner_view"
+        android:layout_gravity="right|top"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="40%"
+        android:clipChildren="false"
+        app:bv_indicator_padding_bottom="20dp"
+        app:bv_indicator_align="ALIGN_CENTER"
+        />
+
+    <Button
+        android:id="@+id/takephoto"
+        android:layout_gravity="right|top"
+        app:layout_widthPercent="100%"
+        app:layout_heightPercent="12%"
+        app:layout_marginTopPercent="40%"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="0dp"
+        android:background="#DB7093"
+        android:text="拍照/相册"
+
+        />
+
+
+   <Button
+       android:id="@+id/histories"
+       android:layout_gravity="right|top"
+       app:layout_widthPercent="100%"
+       app:layout_heightPercent="12%"
+       app:layout_marginTopPercent="52%"
+       android:textSize="18sp"
+       android:textColor="#FFFFFF"
+       android:layout_marginTop="0dp"
+       android:background="#B3EE3A"
+       android:text="我的记录"
+       />
+
+   <Button
+       android:id="@+id/update"
+       android:layout_gravity="right|top"
+       app:layout_widthPercent="100%"
+       app:layout_heightPercent="12%"
+       app:layout_marginTopPercent="64%"
+       android:textSize="18sp"
+       android:textColor="#FFFFFF"
+       android:layout_marginTop="0dp"
+       android:background="#9F79EE"
+       android:text="更新APP"
+       />
+
+   <Button
+       android:id="@+id/cleardatas"
+       android:layout_gravity="right|top"
+       app:layout_widthPercent="100%"
+       app:layout_heightPercent="12%"
+       app:layout_marginTopPercent="76%"
+       android:textSize="18sp"
+       android:textColor="#FFFFFF"
+       android:layout_marginTop="0dp"
+       android:background="#9AFF9A"
+       android:text="清空数据库"
+       />
+
+   <Button
+       android:id="@+id/information"
+       android:layout_gravity="right|top"
+       app:layout_widthPercent="100%"
+       app:layout_heightPercent="12%"
+       app:layout_marginTopPercent="88%"
+       android:textSize="18sp"
+       android:textColor="#FFFFFF"
+       android:layout_marginTop="0dp"
+       android:background="#7A67EE"
+       android:text="版本信息"
+       />
+
+</android.support.percent.PercentFrameLayout>

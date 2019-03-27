@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion sdk_veriosn
+    defaultConfig {
+        minSdkVersion min_sdk_veriosn
+        targetSdkVersion sdk_veriosn
+        versionCode version_code
+        versionName version_name
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publish {
+    userOrg = "$user_org"
+    groupId = 'jsc.kit.component'
+    artifactId = 'BaseComponentLibrary'
+    publishVersion = "$version_name"
+    desc = 'A library of basic customized componets.'
+    website = 'https://github.com/JustinRoom/JSCKit/BaseComponentLibrary'
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:appcompat-v7:$component_version"
+    api "com.android.support:recyclerview-v7:$component_version"
+    api "com.android.support:design:$component_version"
+    api 'com.android.support.constraint:constraint-layout:2.0.0-alpha2'
+}

@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item><!--cokorPrimary是系统默认的颜色蓝色,.colorPrimary 应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item><!--cokorPrimaryDark是系统默认的颜色深蓝色,.colorPrimaryDark 应用的主要暗色调，statusBarColor默认使用该颜色-->
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.PopupOverlay2" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!--弹出层是否覆盖在Toolbar之上-->
+        <item name="overlapAnchor">false</item>
+        <!--弹出层的背景颜色-->
+        <item name="android:colorBackground">@android:color/white</item>
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset" tools:targetApi="eclair">6dp</item>
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset" tools:targetApi="eclair">0dp</item>
+    </style>
+
+    <!--button的样式-->
+    <style name="bigRedButton" >
+        <item name="android:background">@drawable/setbar_bg</item>
+    </style>
+
+
+    <!--底部弹出dialog的style属性-->
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    <!-- dialog的动画 -->
+    <style name="main_menu_animStyle">
+        windowEnterAnimation 进入的动画
+        代码里面
+        <item name="android:windowEnterAnimation">@anim/dialog_in_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out_anim</item>
+    </style>
+
+</resources>
