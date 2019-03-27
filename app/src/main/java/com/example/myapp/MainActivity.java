@@ -338,11 +338,12 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
 
     private void downloadApk(String versionName) {
         DownloadEntity entity = new DownloadEntity();
-        entity.setUrl("https://raw.githubusercontent.com/JustinRoom/JSCKit/master/capture/JSCKitDemo.apk");
+//        entity.setUrl("https://raw.githubusercontent.com/JustinRoom/JSCKit/master/capture/JSCKitDemo.apk");
+        entity.setUrl("https://raw.githubusercontent.com/wangbuer1/Myapp/master/app/release/app-release.apk");
         entity.setDestinationDirectory(new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS));
-        entity.setSubPath("jsckit/JSCKitDemo" + versionName + ".apk");
-        entity.setTitle("JSCKitDemo" + versionName + ".apk");
-        entity.setDesc("JSCKit Library");
+        entity.setSubPath("王雄/植物缺素检测系统" + versionName + ".apk");
+        entity.setTitle("植物缺素检测系统" + versionName + ".apk");
+        entity.setDesc("WangXiong Library");
         entity.setMimeType("application/vnd.android.package-archive");
         fileDownloader.registerDownloadCompleteReceiver();
         fileDownloader.downloadFile(entity);
