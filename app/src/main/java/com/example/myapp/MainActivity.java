@@ -334,8 +334,8 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
 
     private void downloadApk(String versionName) {
         DownloadEntity entity = new DownloadEntity();
-//        entity.setUrl("https://raw.githubusercontent.com/wangbuer1/Myapp/master/app/release/app-release.apk");
-        entity.setUrl("https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe");
+        entity.setUrl("https://raw.githubusercontent.com/wangbuer1/Myapp/master/app/release/app-release.apk");
+//        entity.setUrl("https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe");
         entity.setDestinationDirectory(new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS));
         entity.setSubPath("王雄/植物缺素检测系统" + versionName + ".apk");
         entity.setTitle("植物缺素检测系统" + versionName + ".apk");
