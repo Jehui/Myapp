@@ -285,15 +285,33 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
 
         long curVersionCode = 0;
         String curVersionName = "";
-        try {
-            PackageManager manager = getPackageManager();
-            PackageInfo info = manager.getPackageInfo(getPackageName(), 0);
-            curVersionCode = info.getLongVersionCode();
-            curVersionName = info.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            showCustomToast("Failed to access server.");
-            Toast.makeText(getBaseContext(), "Failed to access server！", Toast.LENGTH_SHORT).show();
+
+        if (Build.VERSION.SDK_INT >= 26){
+            try {
+                PackageManager manager = getPackageManager();
+                PackageInfo info = manager.getPackageInfo(getPackageName(), 0);
+                curVersionCode = info.getLongVersionCode();
+                curVersionName = info.versionName;
+            } catch (PackageManager.NameNotFoundException e) {
+                showCustomToast("Failed to access server.");
+                Toast.makeText(getBaseContext(), "Failed to access server！", Toast.LENGTH_SHORT).show();
+            }
+            catch (NoSuchMethodError e){
+                Toast.makeText(getBaseContext(), "NoSuchMethodError！", Toast.LENGTH_SHORT).show();
+                e.printStackTrace();
+            }
+        }else{
+            try {
+                PackageManager manager = getPackageManager();
+                PackageInfo info = manager.getPackageInfo(getPackageName(), 0);
+                curVersionCode = info.versionCode;
+                curVersionName = info.versionName;
+            } catch (PackageManager.NameNotFoundException e) {
+                showCustomToast("Failed to access server.");
+                Toast.makeText(getBaseContext(), "Failed to access server！", Toast.LENGTH_SHORT).show();
+            }
         }
+
 
         if (curVersionCode > 0 && entity.getApkInfo().getVersionCode() > curVersionCode)
             new android.support.v7.app.AlertDialog.Builder(this)
@@ -338,7 +356,7 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
 //        entity.setUrl("https://dldir1.qq.com/weixin/Windows/WeChatSetup.exe");
         entity.setDestinationDirectory(new File(Environment.getExternalStorageDirectory(), Environment.DIRECTORY_DOWNLOADS));
         entity.setSubPath("王雄/植物缺素检测系统" + versionName + ".apk");
-        entity.setTitle("植物缺素检测系统" + versionName + ".apk");
+        entity.setTitle("作物缺素检测系统" + versionName + ".apk");
         entity.setDesc("WangXiong Library");
         entity.setMimeType("application/vnd.android.package-archive");
         fileDownloader.registerDownloadCompleteReceiver();
