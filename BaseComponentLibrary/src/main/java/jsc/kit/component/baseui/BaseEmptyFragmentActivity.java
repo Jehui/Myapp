@@ -8,15 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
-/**
- * Empty activity for launching any {@link Fragment}.
- *
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public abstract class BaseEmptyFragmentActivity extends AppCompatActivity {
 
     public final static String EXTRA_FULL_SCREEN = "full_screen";

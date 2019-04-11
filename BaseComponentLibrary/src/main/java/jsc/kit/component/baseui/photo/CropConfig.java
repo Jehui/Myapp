@@ -6,13 +6,7 @@ import android.support.annotation.NonNull;
 
 import java.io.File;
 
-/**
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br>https://github.com/JustinRoom/JSCKit
- *
- * @author jiangshicheng
- */
+
 public class CropConfig {
 
     public static final String EXTRA_CROP = "crop";

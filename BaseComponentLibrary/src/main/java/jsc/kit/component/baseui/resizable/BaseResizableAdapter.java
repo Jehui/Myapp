@@ -16,14 +16,7 @@ import java.util.List;
 
 import jsc.kit.component.swiperecyclerview.BaseRecyclerViewAdapter;
 
-/**
- * 大小屏切换基础适配器。
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public abstract class BaseResizableAdapter<T, VH extends RecyclerView.ViewHolder> extends BaseRecyclerViewAdapter<T, VH> {
 
     public static final int VIEW_TYPE_SMALL = 0;

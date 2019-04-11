@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.transition.Slide;
 import android.transition.Transition;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -196,6 +197,7 @@ public class ComponentsActivity extends BaseActivity implements View.OnClickList
         //设置对话框大小
         window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT,ViewGroup.LayoutParams.WRAP_CONTENT);
         dialog.show();
+
         dialog.findViewById(R.id.tv_take_photo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -211,11 +213,26 @@ public class ComponentsActivity extends BaseActivity implements View.OnClickList
             }
         });
 
+
+
         dialog.findViewById(R.id.tv_take_pic).setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceType")
             @Override
             public void onClick(View view) {
-                String flag="2";
+                String flag="3";
+                Intent intent=new Intent(ComponentsActivity.this, TakephotoOrAblum.class);
+                intent.putExtra("flag",flag);//extra_data是data的名字，用于后面取值
+                //Toast.makeText(ComponentsActivity.this,flag,Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+                startActivity(intent);
+            }
+        });
+
+        dialog.findViewById(R.id.tv_take_pic_times).setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onClick(View view) {
+                String flag="4";
                 Intent intent=new Intent(ComponentsActivity.this, TakephotoOrAblum.class);
                 intent.putExtra("flag",flag);//extra_data是data的名字，用于后面取值
                 //Toast.makeText(ComponentsActivity.this,flag,Toast.LENGTH_SHORT).show();

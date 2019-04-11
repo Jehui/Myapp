@@ -160,8 +160,8 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
                                     textview.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20);
                                     textview1.setText(R.string.cucumer);
 
-                                    images=img(croppedBitmap);
-                                    save_pic_infor(results.get(0).getTitle(),images,"cucumber");
+//                                    images=img(croppedBitmap);
+                                    save_pic_infor(results.get(0).getTitle(),"cucumber");
 
                                     break;
                                 case "1":
@@ -170,8 +170,8 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
                                     textview_potry.setText(R.string.N);
                                     textview1.setText(R.string.cucumer);
 
-                                    images=img(croppedBitmap);
-                                    save_pic_infor(results.get(0).getTitle(),images,"cucumber");
+//                                    images=img(croppedBitmap);
+                                    save_pic_infor(results.get(0).getTitle(),"cucumber");
 
                                     break;
                                 case "2":
@@ -180,8 +180,8 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
                                     textview_potry.setText(R.string.P);
                                     textview1.setText(R.string.cucumer);
 
-                                    images=img(croppedBitmap);
-                                    save_pic_infor(results.get(0).getTitle(),images,"cucumber");
+//                                    images=img(croppedBitmap);
+                                    save_pic_infor(results.get(0).getTitle(),"cucumber");
 
                                     break;
 
@@ -215,15 +215,15 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
         return Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
     }
 //将图片转化成二进制数组，存储在数据库中
-    private byte[]img(Bitmap bitmap) {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
-        return baos.toByteArray();
+//    private byte[]img(Bitmap bitmap) {
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+//        return baos.toByteArray();
+//
+//    }
 
-    }
 
-
-    private void save_pic_infor(String flag,byte[]images,String name){
+    private void save_pic_infor(String flag,String name){
 
         Calendar calendar=Calendar.getInstance();  //获取当前时间，作为图标的名字
         String year=calendar.get(Calendar.YEAR)+".";
@@ -232,11 +232,13 @@ public class TakePhotoAndChooseAblum  extends BaseActivity {
         String time=year+month+day;
 
         PictuerInfor pictuerinfor=new PictuerInfor();
-        pictuerinfor.setImages(images);//图片转化成二进制保存
+//        pictuerinfor.setImages(images);//图片转化成二进制保存
         pictuerinfor.setName(name);//名字
         pictuerinfor.setFlag(flag);//缺少元素名字
         pictuerinfor.setImageUri(pictuer_uri.toString());//Uri路径
         pictuerinfor.setTime(time);//拍照时间
+        pictuerinfor.setTab(1);//多张还是单张识别
+        pictuerinfor.setMultiple_time_flag(0);
         pictuerinfor.save();
 
 

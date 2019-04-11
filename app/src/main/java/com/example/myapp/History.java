@@ -77,7 +77,6 @@ public class History extends BaseActivity {
                     BitmapFactory.decodeStream(getContentResolver().openInputStream(Uri.parse(pictuerInfor.getImageUri())));
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
-                    Log.d(MainActivity.class.getSimpleName(),"监控");
                     pictuer_bumber++;
                     continue;
                 }

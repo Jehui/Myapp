@@ -74,16 +74,35 @@ public class TakephotoOrAblum extends AppCompatActivity {
 
                 break;
             case "2":
+
+                break;
+            case "3":
+
                 if(ContextCompat.checkSelfPermission(this,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
                     ActivityCompat.requestPermissions(this,new String[]{
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE},2);
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE},3);
                     /*
-                     * 以上是判断有没有获得读取存储信息的权限，动态申请码是2。
+                     * 以上是判断有没有获得读取存储信息的权限，动态申请码是3。
                      * */
                 }else{
                     openAlbum();
                 }
+                break;
+            case "4":
+                if(ContextCompat.checkSelfPermission(this,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this,new String[]{
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE},4);
+                    /*
+                     * 以上是判断有没有获得读取存储信息的权限，动态申请码是4。
+                     * */
+                }else{
+                    Intent intent=new Intent(TakephotoOrAblum.this, Multiple_choice_ablum.class);
+                    startActivity(intent);
+                    finish();
+                }
+                break;
         }
     }
 
@@ -110,6 +129,22 @@ public class TakephotoOrAblum extends AppCompatActivity {
             case 2:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     openAlbum();
+                } else {
+                    Toast.makeText(this, "You denied the permission", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case 3:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    openAlbum();
+                } else {
+                    Toast.makeText(this, "You denied the permission", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            case 4:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Intent intent=new Intent(TakephotoOrAblum.this, Multiple_choice_ablum.class);
+                    startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(this, "You denied the permission", Toast.LENGTH_SHORT).show();
                 }

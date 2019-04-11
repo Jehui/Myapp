@@ -8,15 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-/**
- * Black space line {@link android.support.v7.widget.RecyclerView.ItemDecoration} for {@link RecyclerView}.
- * <p>
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public class BlankSpaceItemDecoration extends RecyclerView.ItemDecoration {
 
     int leftSpace;

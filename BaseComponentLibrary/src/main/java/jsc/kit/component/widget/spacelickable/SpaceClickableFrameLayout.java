@@ -8,14 +8,7 @@ import android.widget.FrameLayout;
 
 import jsc.kit.component.IViewAttrDelegate;
 
-/**
- * 可监听空白处点击的FrameLayout
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public class SpaceClickableFrameLayout extends FrameLayout implements IViewAttrDelegate {
 
     private SpaceClickHelper<SpaceClickableFrameLayout> spaceClickHelper = null;

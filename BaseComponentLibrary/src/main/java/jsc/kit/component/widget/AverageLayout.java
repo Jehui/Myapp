@@ -14,14 +14,7 @@ import java.lang.annotation.RetentionPolicy;
 import jsc.kit.component.IViewAttrDelegate;
 import jsc.kit.component.R;
 
-/**
- * 均分布局。
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public class AverageLayout extends ViewGroup implements IViewAttrDelegate{
 
     public static final int HORIZONTAL = 0;

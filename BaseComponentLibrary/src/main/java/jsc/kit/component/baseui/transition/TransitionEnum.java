@@ -2,13 +2,7 @@ package jsc.kit.component.baseui.transition;
 
 import android.support.annotation.Nullable;
 
-/**
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public enum TransitionEnum {
     SLIDE((byte) 0, "slide"),
     EXPLODE((byte) 1, "explode"),

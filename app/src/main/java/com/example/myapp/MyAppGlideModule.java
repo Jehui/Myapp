@@ -5,8 +5,8 @@ package com.example.myapp; /**
  * @date 2018/3/12 17:52
  */
 
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
+//import com.bumptech.glide.annotation.GlideModule;
+//import com.bumptech.glide.module.AppGlideModule;
 
-@GlideModule
-public final class MyAppGlideModule extends AppGlideModule {}
+
+public final class MyAppGlideModule  {}

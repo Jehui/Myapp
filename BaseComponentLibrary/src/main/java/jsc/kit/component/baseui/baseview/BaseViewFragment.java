@@ -12,13 +12,7 @@ import android.widget.LinearLayout;
 import jsc.kit.component.baseui.BaseLazyLoadFragment;
 import jsc.kit.component.baseui.baseview.BaseViewProvider;
 
-/**
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public abstract class BaseViewFragment extends BaseLazyLoadFragment implements BaseViewCreateDelegate {
 
     public BaseViewProvider baseViewProvider;

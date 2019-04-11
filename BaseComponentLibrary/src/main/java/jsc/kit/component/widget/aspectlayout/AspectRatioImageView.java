@@ -11,17 +11,7 @@ import android.util.AttributeSet;
 import jsc.kit.component.IViewAttrDelegate;
 import jsc.kit.component.R;
 
-/**
- * <p>
- * 自定义宽高比例的FrameLayout，例如2:5、4:3等等。
- * 默认为1:1。
- * </p>
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public class AspectRatioImageView extends AppCompatImageView implements IViewAttrDelegate, IAspect {
 
     private AspectRatioHelper helper = null;

@@ -8,14 +8,6 @@ import android.view.Gravity;
 
 import jsc.kit.component.IViewAttrDelegate;
 
-/**
- * change text sie automatically to fit it's fixed width .
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
 public class AutoTextSizeView extends AppCompatTextView implements IViewAttrDelegate{
 
     public AutoTextSizeView(Context context) {

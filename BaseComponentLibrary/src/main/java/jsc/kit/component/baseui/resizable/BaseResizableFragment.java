@@ -17,15 +17,7 @@ import java.lang.annotation.RetentionPolicy;
 
 import jsc.kit.component.baseui.BaseFragment;
 
-/**
- * 大小屏切换架构类。
- *
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public abstract class BaseResizableFragment extends BaseFragment implements OnScreenChangeListener {
 
     public static final int FLAG_FULL_SCREEN = 0x1;//大屏视图标识

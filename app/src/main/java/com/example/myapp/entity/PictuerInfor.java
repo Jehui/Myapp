@@ -2,13 +2,28 @@ package com.example.myapp.entity;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.Date;
+
 public class PictuerInfor extends DataSupport {
     private int id;
     private String  name;
     private String flag;//缺少的元素 K  N  P
     private String time;//拍摄的时间
     private String imageUri;//图片的Uri地址
-    private byte[]images;//将图片以二进制的形式存到数据库中
+    private int tab;//多张还是单张
+    private long multiple_time_flag;
+
+    public void setMultiple_time_flag(long multiple_time_flag) {
+        this.multiple_time_flag = multiple_time_flag;
+    }
+
+    public long getMultiple_time_flag() {
+        return multiple_time_flag;
+    }
+
+    public void setTab(int tab) { this.tab = tab; }
+
+    public int getTab() { return tab; }
 
     public void setId(int id) {
         this.id = id;
@@ -30,9 +45,6 @@ public class PictuerInfor extends DataSupport {
         this.imageUri = imageUri;
     }
 
-    public void setImages(byte[] images) {
-        this.images = images;
-    }
 
     public int getId() {
         return id;
@@ -54,7 +66,4 @@ public class PictuerInfor extends DataSupport {
         return imageUri;
     }
 
-    public byte[] getImages() {
-        return images;
-    }
 }

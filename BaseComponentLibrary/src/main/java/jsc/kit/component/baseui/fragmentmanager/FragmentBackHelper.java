@@ -9,14 +9,6 @@ import android.support.v4.app.FragmentManager;
 
 import java.util.Stack;
 
-/**
- * Back stack manager for fragments.
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
 public class FragmentBackHelper {
 
     private Stack<BackRecord> backRecordStack = new Stack<>();

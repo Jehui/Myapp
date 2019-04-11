@@ -20,14 +20,6 @@ import java.util.List;
 
 import jsc.kit.component.R;
 
-/**
- * 如果开启循环滑动效果，data长度至少为3.
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
 public class JSCBannerView extends FrameLayout {
     private final int MSG_NEXT_ITEM = 0x9988;
     private ViewPager viewPager;

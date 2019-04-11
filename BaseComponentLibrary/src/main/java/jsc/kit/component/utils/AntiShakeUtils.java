@@ -6,14 +6,7 @@ import android.view.View;
 
 import jsc.kit.component.R;
 
-/**
- * 防抖动点击
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public class AntiShakeUtils {
 
     private final static long INTERNAL_TIME = 1000;

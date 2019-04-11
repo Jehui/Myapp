@@ -15,14 +15,7 @@ import jsc.kit.component.baseui.handler.HandlerProvider;
 import jsc.kit.component.baseui.permission.PermissionChecker;
 import jsc.kit.component.baseui.transition.TransitionProvider;
 
-/**
- * 懒加载fragment
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
+
 public abstract class BaseLazyLoadFragment extends BaseFragment implements HandlerDelegate{
 
     public HandlerProvider handlerProvider;

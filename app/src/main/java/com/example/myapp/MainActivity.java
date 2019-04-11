@@ -175,8 +175,8 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
         jscBannerView.setPageTransformer(true, new ScaleTransformer());// 然后把这个实现对象设置到viewpager里
 
         List<Banner> banners = new ArrayList<>();
-        banners.add(new Banner("img/1.jpg"));
         banners.add(new Banner("img/2.jpg"));
+        banners.add(new Banner("img/1.jpg"));
         banners.add(new Banner("img/3.jpg"));
         banners.add(new Banner("img/4.jpg"));
         banners.add(new Banner("img/5.jpg"));

@@ -8,8 +8,8 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -21,7 +21,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <!-- Android 7.0 照片、APK下载保存路径-->
+        <!-- Android 7.0 照片、APK下载保存路径 -->
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.myapp.fileProvider"
@@ -33,19 +33,21 @@
         </provider>
 
         <activity
-            android:name="com.example.myapp.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- 多个界面需要注册Activity -->
-        <activity android:name="com.example.myapp.HistoryToPictuerinformation"></activity>
-        <activity android:name="com.example.myapp.ui.ComponentsActivity" />
-        <activity android:name="com.example.myapp.TakePhotoAndChooseAblum" />
-        <activity android:name="com.example.myapp.TakephotoOrAblum" />
-        <activity android:name="com.example.myapp.History" />
-        <activity android:name="com.example.myapp.AboutActivity" />
+        <activity android:name=".HistoryToPictuerinformation" />
+        <activity android:name=".ui.ComponentsActivity" />
+        <activity android:name=".TakePhotoAndChooseAblum" />
+        <activity android:name=".TakephotoOrAblum" />
+        <activity android:name=".History" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".Multiple_choice_ablum"/>
     </application>
 
 </manifest>

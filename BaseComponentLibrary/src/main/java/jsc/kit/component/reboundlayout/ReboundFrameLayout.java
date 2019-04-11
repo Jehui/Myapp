@@ -15,14 +15,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.OverScroller;
 
-/**
- * Rebound after dragging like IOS.
- * <br>Email:1006368252@qq.com
- * <br>QQ:1006368252
- * <br><a href="https://github.com/JustinRoom/JSCKit" target="_blank">https://github.com/JustinRoom/JSCKit</a>
- *
- * @author jiangshicheng
- */
 public class ReboundFrameLayout extends FrameLayout {
     private final String TAG = getClass().getSimpleName();
     private final float DEFAULT_SLIDING_SCALE_RATIO = 0.65f;
