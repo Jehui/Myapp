@@ -36,6 +36,7 @@ import java.util.concurrent.ThreadFactory;
 
 import jsc.kit.component.graph.ColumnarItem;
 import jsc.kit.component.graph.VerticalColumnarGraphView;
+import jsc.kit.component.vscrollscreen.VScrollScreenLayout;
 
 public class Multiple_choice_ablum extends BaseActivity {
     private static final int REQUEST_CODE_SELECT_IMG = 1;
@@ -52,12 +53,12 @@ public class Multiple_choice_ablum extends BaseActivity {
 
     private GridView gridView;
     private TextView textView1_0;
-//    private TextView textView1_1;
     private TextView textView2_1;
     private TextView textView2_2;
     private Executor executor;
     private Classifier classifier;
     VerticalColumnarGraphView verticalColumnarGraphView;
+    VScrollScreenLayout vScrollScreenLayout;
 
     float[] ratios={0,0,0} ;
     String[] values={"0张","0张","0张"};
@@ -116,26 +117,34 @@ public class Multiple_choice_ablum extends BaseActivity {
         textView1_0=(TextView)findViewById(R.id.textview1_0);
         textView2_1=(TextView)findViewById(R.id.textview2_1);
         textView2_2=(TextView)findViewById(R.id.textview2_2);
+        vScrollScreenLayout=(VScrollScreenLayout)findViewById(R.id.activity_main);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE_SELECT_IMG) {
-            try {
-                showContent(data);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(resultCode==RESULT_OK){
+                try {
+                    showContent(data);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return;
+            }else{
+                finish();
             }
-            return;
+
         }
 
         super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void showContent(Intent data) throws IOException {
+
         List<String> paths = ImageSelector.getImagePaths(data);
+        vScrollScreenLayout.setVisibility(View.VISIBLE);
         List<Bitmap>bitmaps=new ArrayList<>();
         String s = null;
         String s1 = null;
