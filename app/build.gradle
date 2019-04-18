@@ -24,6 +24,10 @@ android {
         }
     }
 }
+//release表示正式版本，对应的是debug，一般debug是不需要进行代码加密的
+//minifyEnabled true表示进行代码加密，false表示不加密
+//proguardFiles 代码加密原则 有两个文件对，getDefaultProguardFile(‘proguard-android.txt’)表示默认文件，这个文件是sdk自带的，有一些通用的配置；但是如果apk需要更加严格的加密，我们可以在’proguard-rules.pro’文件中进行更加详尽的配置
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -46,8 +50,13 @@ dependencies {
     })
 // TensorFlow
     implementation 'org.tensorflow:tensorflow-android:1.6.0'
+    //noinspection GradleDependency
     implementation 'com.github.bumptech.glide:glide:3.7.0' // Glide
     annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
+//    多张拍摄依赖
+    implementation 'io.reactivex:rxjava:1.0.14'
+    implementation 'io.reactivex:rxandroid:1.0.1'
+    implementation 'com.tbruyelle.rxpermissions:rxpermissions:0.9.3@aar'
 
 }

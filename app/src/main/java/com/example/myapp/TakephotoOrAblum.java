@@ -73,7 +73,20 @@ public class TakephotoOrAblum extends AppCompatActivity {
                 }
 
                 break;
+
             case "2":
+                if(ContextCompat.checkSelfPermission(this,
+                        Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(this,new String[]{
+                            Manifest.permission.CAMERA},2);
+                    /*以上是检测APP有没有得到相应的权限，没有的话调用ActivityCompat.requestPermissions函数，
+                     动态申请权限，动态码是1，因为要判断多个权限的获得情况，此处是判断打开照相机权限
+                     */
+                }else{
+                    Intent intent=new Intent(TakephotoOrAblum.this, Multiple_TakePhoto.class);
+                    startActivity(intent);
+                    finish();
+                }
 
                 break;
             case "3":

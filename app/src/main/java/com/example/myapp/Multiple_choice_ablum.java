@@ -75,8 +75,6 @@ public class Multiple_choice_ablum extends BaseActivity {
         setTitleBarTitle(getClass().getSimpleName().replace("Multiple_choice_ablum", "相册多张选择结果"));
         initView();
 
-
-
 //避免耗时任务占用 CPU 时间片造成UI绘制卡顿，提升启动页面加载速度
         Looper.myQueue().addIdleHandler(idleHandler);
     }
@@ -144,6 +142,7 @@ public class Multiple_choice_ablum extends BaseActivity {
     private void showContent(Intent data) throws IOException {
 
         List<String> paths = ImageSelector.getImagePaths(data);
+
         vScrollScreenLayout.setVisibility(View.VISIBLE);
         List<Bitmap>bitmaps=new ArrayList<>();
         String s = null;

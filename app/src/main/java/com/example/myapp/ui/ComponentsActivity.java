@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.example.myapp.Multiple_TakePhoto;
 import com.example.myapp.R;
 import com.example.myapp.TakephotoOrAblum;
 import com.example.myapp.adapter.ComponentItemAdapter;
@@ -213,7 +214,21 @@ public class ComponentsActivity extends BaseActivity implements View.OnClickList
             }
         });
 
+        dialog.findViewById(R.id.multiple_take_photo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //注意下面的context中的this要指明是谁的this，因为这个文件中共有两个，一个是主体的一个是Dialog的。
+                //Toast.makeText(ComponentsActivity.this,"启动拍照功能",Toast.LENGTH_SHORT).show();
+                String flag="2";
+                Intent intent=new Intent(ComponentsActivity.this, TakephotoOrAblum.class);
+                intent.putExtra("flag",flag);//extra_data是data的名字，用于后面取值
+                //Toast.makeText(ComponentsActivity.this,flag,Toast.LENGTH_SHORT).show();
+                Toast.makeText(ComponentsActivity.this, "最多拍摄9张", Toast.LENGTH_SHORT).show();
+                dialog.dismiss();
+                startActivity(intent);
 
+            }
+        });
 
         dialog.findViewById(R.id.tv_take_pic).setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceType")

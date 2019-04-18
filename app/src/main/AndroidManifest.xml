@@ -47,7 +47,8 @@
         <activity android:name=".TakephotoOrAblum" />
         <activity android:name=".History" />
         <activity android:name=".AboutActivity" />
-        <activity android:name=".Multiple_choice_ablum"/>
+        <activity android:name=".Multiple_choice_ablum" />
+        <activity android:name=".Multiple_TakePhoto"/>
     </application>
 
 </manifest>

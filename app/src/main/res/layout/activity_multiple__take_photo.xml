@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jsc.kit.component.vscrollscreen.VScrollScreenLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:vssl_default_page_index="0"
+    app:vssl_y_slide_ratio="0.45"
+    android:background="#FFFFFF"
+    android:theme="@android:style/Theme.NoDisplay"
+    tools:context=".Multiple_TakePhoto"
+    android:visibility="invisible"
+    >
+
+    <!--vssl_default_page_index表示默认展示滑动页面的第0页，也就是第一页-->
+    <!--first page-->
+
+<!--layout_below将当前控件的顶部置于给定ID的控件之下，并且两控件应该对齐-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearlatout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/pb"
+                android:visibility="gone"
+                android:layout_below="@id/linearlatout1"
+                android:background="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ProgressBar
+                    android:layout_centerInParent="true"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
+
+            </RelativeLayout>
+
+            <com.example.myapp.ui.CustomGridView
+                android:id="@+id/lv_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"
+                android:background="#FFFFFF"
+                />
+
+
+            <TextView
+                android:id="@+id/textview1_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="Loading......"
+                />
+
+            <jsc.kit.component.graph.VerticalColumnarGraphView
+                android:id="@+id/vertical_columnar_graph"
+                android:background="@android:color/white"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/textview1_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:id="@+id/textview1_2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#777777"
+                android:text="向上滑动查看详细信息"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--second page-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jsc.kit.component.archeaderview.PictureArcHeaderView
+                android:id="@+id/image_pic1"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:ahv_direction="downInSide"
+                app:ahv_height="30dp"
+                app:ahv_src="@drawable/cucumber1" />
+
+            <TextView
+                android:id="@+id/textview2_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="#000000"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:gravity="center_horizontal"
+
+                />
+            <TextView
+                android:id="@+id/textview2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="#000000"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+
+                />
+
+            <TextView
+                android:id="@+id/textview2_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="#777777"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:text="向上滑动查看相应措施"
+
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!--3 page-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jsc.kit.component.archeaderview.PictureArcHeaderView
+                android:id="@+id/image_pic3_"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:ahv_direction="downInSide"
+                app:ahv_height="30dp"
+                app:ahv_src="@drawable/cucumer2" />
+
+
+            <TextView
+                android:id="@+id/textview3_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:text="缺 K"
+                />
+
+            <TextView
+                android:id="@+id/textview_potry3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/K"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--4 page-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jsc.kit.component.archeaderview.PictureArcHeaderView
+                android:id="@+id/image_pic4_"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:ahv_direction="downInSide"
+                app:ahv_height="30dp"
+                app:ahv_src="@drawable/cucumer2" />
+
+
+            <TextView
+                android:id="@+id/textview4_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="缺 N"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/textview_potry4_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/N"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--5 page-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jsc.kit.component.archeaderview.PictureArcHeaderView
+                android:id="@+id/image_pic5_"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:ahv_direction="downInSide"
+                app:ahv_height="30dp"
+                app:ahv_src="@drawable/cucumer2" />
+
+
+            <TextView
+                android:id="@+id/textview5_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="缺 P"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/textview_potry5_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/P"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!--5 page-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <jsc.kit.component.archeaderview.PictureArcHeaderView
+                android:id="@+id/image_pic6_"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                app:ahv_direction="downInSide"
+                app:ahv_height="30dp"
+                app:ahv_src="@drawable/cucumer2" />
+
+
+            <TextView
+                android:id="@+id/textview_potry6_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/cucumer"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</jsc.kit.component.vscrollscreen.VScrollScreenLayout>
