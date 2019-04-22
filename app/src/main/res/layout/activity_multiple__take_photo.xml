@@ -12,7 +12,7 @@
     android:background="#FFFFFF"
     android:theme="@android:style/Theme.NoDisplay"
     tools:context=".Multiple_TakePhoto"
-    android:visibility="invisible"
+    android:visibility="visible"
     >
 
     <!--vssl_default_page_index表示默认展示滑动页面的第0页，也就是第一页-->
@@ -50,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:numColumns="3"
                 android:background="#FFFFFF"
+                android:visibility="invisible"
                 />
 
 
@@ -61,6 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
                 android:text="Loading......"
+                android:visibility="visible"
                 />
 
             <jsc.kit.component.graph.VerticalColumnarGraphView
@@ -78,6 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
+                android:visibility="invisible"
                 />
             <TextView
                 android:id="@+id/textview1_2"
@@ -87,6 +90,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#777777"
                 android:text="向上滑动查看详细信息"
+                android:visibility="invisible"
                 />
 
         </LinearLayout>

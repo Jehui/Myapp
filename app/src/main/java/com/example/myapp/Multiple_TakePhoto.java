@@ -72,6 +72,8 @@ public class Multiple_TakePhoto extends BaseActivity {
     private VScrollScreenLayout vScrollScreenLayout;
     private VerticalColumnarGraphView verticalColumnarGraphView;
     private TextView textView1_0;
+    private TextView textView1_1;
+    private TextView textView1_2;
     private TextView textView2_1;
     private TextView textView2_2;
     private Executor executor;
@@ -89,16 +91,21 @@ public class Multiple_TakePhoto extends BaseActivity {
         setTitleBarTitle(getClass().getSimpleName().replace("Multiple_TakePhoto", "多张拍摄检测结果"));
         mRxPermissions = new RxPermissions(this);
         calendar = Calendar.getInstance();
+
         pb = findViewById(R.id.pb);
         gridView = ((GridView) findViewById(R.id.lv_grid));
         textView1_0=(TextView)findViewById(R.id.textview1_0);
+        textView1_1=(TextView)findViewById(R.id.textview1_1);
+        textView1_2=(TextView)findViewById(R.id.textview1_2);
         textView2_1=(TextView)findViewById(R.id.textview2_1);
         textView2_2=(TextView)findViewById(R.id.textview2_2);
         vScrollScreenLayout=(VScrollScreenLayout)findViewById(R.id.activity_main);
         verticalColumnarGraphView=findViewById(R.id.vertical_columnar_graph);
-
+        pb.setVisibility(View.VISIBLE);
         //避免耗时任务占用 CPU 时间片造成UI绘制卡顿，提升启动页面加载速度
         Looper.myQueue().addIdleHandler(idleHandler);
+
+
     }
 
 
@@ -125,6 +132,7 @@ public class Multiple_TakePhoto extends BaseActivity {
                     return thread;
                 }
             });
+
             takeOnCamera();
             return false;
         }
@@ -139,6 +147,7 @@ public class Multiple_TakePhoto extends BaseActivity {
         systemTime2 = getSystemTime();
         Log.i(Multiple_TakePhoto.class.getName(),"wodeceshi"+resultCode);
         if (requestCode == REQUEST_SMALL) {
+            pb.setVisibility(View.VISIBLE);
             getContactList();
 //       resultCode的值不拍照成功与否，一直等于0，原因在于Android系统版本问题，在4.4以后的版本，在拍照时候需要利用Intent控件拍照完毕保存指定的URI
 //        等操作，详情可以看TakephotoOrAblum.java文件中拍照功能，或者网址https://blog.csdn.net/lepaitianshi/article/details/82837748
@@ -148,11 +157,14 @@ public class Multiple_TakePhoto extends BaseActivity {
 
 
     private void getContactList() {
+        pb.setVisibility(View.VISIBLE);
         mRxPermissions.requestEach(Manifest.permission.READ_EXTERNAL_STORAGE)
                 .subscribe(new Action1<Permission>() {
                     @Override
                     public void call(Permission permission) {
                         if (permission.granted) {
+                            pb.setVisibility(View.VISIBLE);
+
                             final List<Bitmap>bitmaps=new ArrayList<>();
                             final List<String> paths=new ArrayList<>();
                             //  读取照片然后选择合适的照片保存再list里面
@@ -249,6 +261,10 @@ public class Multiple_TakePhoto extends BaseActivity {
                                                 textView1_0.setText("检测结果");
                                                 textView1_0.setTextSize(24);
 
+                                                gridView.setVisibility(View.VISIBLE);
+                                                textView1_0.setVisibility(View.VISIBLE);
+                                                textView1_1.setVisibility(View.VISIBLE);
+                                                textView1_2.setVisibility(View.VISIBLE);
                                                 verticalColumnarGraphView.setVisibility(View.VISIBLE);
                                                 handlerProvider.sendUIEmptyMessageDelay(0, 350);//显示柱形
 

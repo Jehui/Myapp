@@ -18,6 +18,7 @@ import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -325,10 +326,13 @@ public class MainActivity extends BaseActivity  implements View.OnClickListener 
                     })
                     .setNegativeButton("取消", null)
                     .show();
-        else
-//            showCustomToast("This is latest version.");
+        else{
+            //            showCustomToast("This is latest version.");
 //        Log.d(MainActivity.class.getSimpleName(),curVersionCode+"   github版本："+entity.getApkInfo().getVersionCode());
             Toast.makeText(getBaseContext(), "当前是最新版本！", Toast.LENGTH_SHORT).show();
+            Log.i(MainActivity.class.getName(),"你是谁"+"目前版本："+curVersionCode+"github:"+entity.getApkInfo().getVersionCode());
+        }
+
     }
 
 

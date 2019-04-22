@@ -223,7 +223,7 @@ public class ComponentsActivity extends BaseActivity implements View.OnClickList
                 Intent intent=new Intent(ComponentsActivity.this, TakephotoOrAblum.class);
                 intent.putExtra("flag",flag);//extra_data是data的名字，用于后面取值
                 //Toast.makeText(ComponentsActivity.this,flag,Toast.LENGTH_SHORT).show();
-                Toast.makeText(ComponentsActivity.this, "最多拍摄9张", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ComponentsActivity.this, "按返回键结束拍摄！", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
                 startActivity(intent);
 
